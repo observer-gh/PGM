@@ -1,3 +1,4 @@
 pandas
 pymc
 scikit-learn
+pgmpy
