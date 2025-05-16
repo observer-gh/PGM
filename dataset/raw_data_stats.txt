@@ -1,0 +1,453 @@
+================================================================================
+File: appearances.csv
+
+1) First 10 rows:
+ appearance_id  game_id  player_id  player_club_id  player_current_club_id       date      player_name competition_id  yellow_cards  red_cards  goals  assists  minutes_played
+ 2231978_38004  2231978      38004             853                     235 2012-07-03 Aurélien Joachim            CLQ             0          0      2        0              90
+ 2233748_79232  2233748      79232            8841                    2698 2012-07-05   Ruslan Abyshov            ELQ             0          0      0        0              90
+ 2234413_42792  2234413      42792            6251                     465 2012-07-05      Sander Puri            ELQ             0          0      0        0              45
+ 2234418_73333  2234418      73333            1274                    6646 2012-07-05  Vegar Hedenstad            ELQ             0          0      0        0              90
+2234421_122011  2234421     122011             195                    3008 2012-07-05 Markus Henriksen            ELQ             0          0      0        1              90
+2234421_146889  2234421     146889             195                    2778 2012-07-05   Peter Ankersen            ELQ             1          0      0        0              90
+ 2235539_28716  2235539      28716             282                    7185 2012-07-05     Adi Adilovic            ELQ             0          0      0        0              90
+ 2235539_69445  2235539      69445             282                   19771 2012-07-05       Ivan Sesar            ELQ             1          0      0        1              90
+ 2235545_19409  2235545      19409             317                     200 2012-07-05   Willem Janssen            ELQ             0          0      0        0              45
+ 2235545_30003  2235545      30003             317                     317 2012-07-05       Wout Brama            ELQ             0          0      0        0              90
+
+2) Statistics (describe):
+        appearance_id       game_id     player_id  player_club_id  player_current_club_id        date player_name competition_id  yellow_cards     red_cards         goals       assists  minutes_played
+count         1706806  1.706806e+06  1.706806e+06    1.706806e+06            1.706806e+06     1706806     1706800        1706806  1.706806e+06  1.706806e+06  1.706806e+06  1.706806e+06    1.706806e+06
+unique        1706806           NaN           NaN             NaN                     NaN        3738       25141             43           NaN           NaN           NaN           NaN             NaN
+top     2231978_38004           NaN           NaN             NaN                     NaN  2020-10-04      Danilo            IT1           NaN           NaN           NaN           NaN             NaN
+freq                1           NaN           NaN             NaN                     NaN        1795        1115         140729           NaN           NaN           NaN           NaN             NaN
+mean              NaN  3.166096e+06  2.099745e+05    3.138290e+03            3.991235e+03         NaN         NaN            NaN  1.472329e-01  3.783090e-03  9.589432e-02  7.549540e-02    6.906125e+01
+std               NaN  6.651196e+05  1.944008e+05    8.315815e+03            1.084706e+04         NaN         NaN            NaN  3.653799e-01  6.139039e-02  3.309349e-01  2.855614e-01    2.999313e+01
+min               NaN  2.211607e+06  1.000000e+01    1.000000e+00           -1.000000e+00         NaN         NaN            NaN  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00    1.000000e+00
+25%               NaN  2.589007e+06  5.840200e+04    2.890000e+02            3.310000e+02         NaN         NaN            NaN  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00    4.500000e+01
+50%               NaN  3.080787e+06  1.495770e+05    8.260000e+02            9.030000e+02         NaN         NaN            NaN  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00    9.000000e+01
+75%               NaN  3.621597e+06  3.066680e+05    2.441000e+03            2.696000e+03         NaN         NaN            NaN  0.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00    9.000000e+01
+max               NaN  4.572898e+06  1.380876e+06    1.103020e+05            1.103020e+05         NaN         NaN            NaN  2.000000e+00  1.000000e+00  6.000000e+00  6.000000e+00    1.480000e+02
+
+3) Missing values per column:
+appearance_id             0
+game_id                   0
+player_id                 0
+player_club_id            0
+player_current_club_id    0
+date                      0
+player_name               6
+competition_id            0
+yellow_cards              0
+red_cards                 0
+goals                     0
+assists                   0
+minutes_played            0
+
+================================================================================
+File: club_games.csv
+
+1) First 10 rows:
+ game_id  club_id  own_goals  own_position     own_manager_name  opponent_id  opponent_goals  opponent_position opponent_manager_name hosting  is_win
+ 2320450   1468.0        0.0           NaN    Holger Bachthaler         24.0             2.0                NaN             Armin Veh    Home       0
+ 2320454    222.0        0.0           NaN          Volkan Uluc         79.0             2.0                NaN        Bruno Labbadia    Home       0
+ 2320460      1.0        3.0           NaN      Jürgen Luginger         86.0             1.0                NaN            Robin Dutt    Home       1
+ 2320472   2036.0        4.0           NaN        Frank Schmidt         72.0             5.0                NaN     Alexander Schmidt    Home       0
+ 2321027     33.0        3.0           8.0          Jens Keller         41.0             3.0                9.0         Thorsten Fink    Home       0
+ 2321033     23.0        0.0          13.0 Torsten Lieberknecht         86.0             1.0                7.0            Robin Dutt    Home       0
+ 2321044     16.0        2.0           1.0         Jürgen Klopp         23.0             1.0               15.0  Torsten Lieberknecht    Home       1
+ 2321060     23.0        0.0          18.0 Torsten Lieberknecht         24.0             2.0               11.0             Armin Veh    Home       0
+ 2321063     33.0        2.0          13.0          Jens Keller         15.0             0.0                3.0           Sami Hyypiä    Home       1
+ 2321072     16.0        6.0           1.0         Jürgen Klopp         41.0             2.0               15.0         Thorsten Fink    Home       1
+
+2) Statistics (describe):
+             game_id       club_id      own_goals   own_position own_manager_name   opponent_id  opponent_goals  opponent_position opponent_manager_name hosting         is_win
+count   1.480520e+05  1.480340e+05  148028.000000  103118.000000           146396  1.480340e+05   148028.000000      103118.000000                146396  148052  148052.000000
+unique           NaN           NaN            NaN            NaN             5995           NaN             NaN                NaN                  5995       2            NaN
+top              NaN           NaN            NaN            NaN    Diego Simeone           NaN             NaN                NaN         Diego Simeone    Home            NaN
+freq             NaN           NaN            NaN            NaN              696           NaN             NaN                NaN                   696   74026            NaN
+mean    3.165280e+06  5.067779e+03       1.466000       9.363506              NaN  5.067779e+03        1.466000           9.363506                   NaN     NaN       0.392808
+std     6.679385e+05  3.091623e+04       1.408757       5.308675              NaN  3.091623e+04        1.408757           5.308675                   NaN     NaN       0.488376
+min     2.211607e+06  1.000000e+00       0.000000       1.000000              NaN  1.000000e+00        0.000000           1.000000                   NaN     NaN       0.000000
+25%     2.587784e+06  3.540000e+02       0.000000       5.000000              NaN  3.540000e+02        0.000000           5.000000                   NaN     NaN       0.000000
+50%     3.080342e+06  9.890000e+02       1.000000       9.000000              NaN  9.890000e+02        1.000000           9.000000                   NaN     NaN       0.000000
+75%     3.646236e+06  3.060000e+03       2.000000      14.000000              NaN  3.060000e+03        2.000000          14.000000                   NaN     NaN       1.000000
+max     4.572898e+06  4.506873e+06      19.000000      21.000000              NaN  4.506873e+06       19.000000          21.000000                   NaN     NaN       1.000000
+
+3) Missing values per column:
+game_id                      0
+club_id                     18
+own_goals                   24
+own_position             44934
+own_manager_name          1656
+opponent_id                 18
+opponent_goals              24
+opponent_position        44934
+opponent_manager_name     1656
+hosting                      0
+is_win                       0
+
+================================================================================
+File: clubs.csv
+
+1) First 10 rows:
+ club_id         club_code                                 name domestic_competition_id  total_market_value  squad_size  average_age  foreigners_number  foreigners_percentage  national_team_players                   stadium_name  stadium_seats net_transfer_record  coach_name  last_season                                             filename                                                                       url
+     105   sv-darmstadt-98                      SV Darmstadt 98                      L1                 NaN          27         25.6                 13                   48.1                      1 Merck-Stadion am Böllenfalltor          17810             +€3.05m         NaN         2023 ../data/raw/transfermarkt-scraper/2023/clubs.json.gz     https://www.transfermarkt.co.uk/sv-darmstadt-98/startseite/verein/105
+   11127 ural-ekaterinburg                   Ural Yekaterinburg                     RU1                 NaN          30         26.5                 11                   36.7                      3            Yekaterinburg Arena          23000              +€880k         NaN         2023 ../data/raw/transfermarkt-scraper/2023/clubs.json.gz https://www.transfermarkt.co.uk/ural-ekaterinburg/startseite/verein/11127
+     114 besiktas-istanbul            Beşiktaş Jimnastik Kulübü                     TR1                 NaN          30         26.6                 15                   50.0                      8                  Beşiktaş Park          42445            €-25.26m         NaN         2024 ../data/raw/transfermarkt-scraper/2024/clubs.json.gz   https://www.transfermarkt.co.uk/besiktas-istanbul/startseite/verein/114
+      12            as-rom           Associazione Sportiva Roma                     IT1                 NaN          26         26.3                 18                   69.2                     17               Olimpico di Roma          70634            €-76.90m         NaN         2024 ../data/raw/transfermarkt-scraper/2024/clubs.json.gz               https://www.transfermarkt.co.uk/as-rom/startseite/verein/12
+     148 tottenham-hotspur      Tottenham Hotspur Football Club                     GB1                 NaN          30         25.5                 21                   70.0                     18      Tottenham Hotspur Stadium          62850           €-120.05m         NaN         2024 ../data/raw/transfermarkt-scraper/2024/clubs.json.gz   https://www.transfermarkt.co.uk/tottenham-hotspur/startseite/verein/148
+     157          kaa-gent Koninklijke Atletiek Associatie Gent                     BE1                 NaN          30         25.2                 19                   63.3                      5             Planet Group Arena          20185             +€5.63m         NaN         2024 ../data/raw/transfermarkt-scraper/2024/clubs.json.gz            https://www.transfermarkt.co.uk/kaa-gent/startseite/verein/157
+    1894       hvidovre-if                          Hvidovre IF                     DK1                 NaN          25         26.4                  3                   12.0                      2          PRO VENTILATION Arena          12000              +€225k         NaN         2023 ../data/raw/transfermarkt-scraper/2023/clubs.json.gz        https://www.transfermarkt.co.uk/hvidovre-if/startseite/verein/1894
+     190     fc-kopenhagen              Football Club København                     DK1                 NaN          28         26.1                 19                   67.9                      9                         Parken          38065            +€35.06m         NaN         2024 ../data/raw/transfermarkt-scraper/2024/clubs.json.gz       https://www.transfermarkt.co.uk/fc-kopenhagen/startseite/verein/190
+     192  roda-jc-kerkrade                     Roda JC Kerkrade                     NL1                 NaN          25         24.0                  9                   36.0                      0       Parkstad Limburg Stadion          19979             +€1.30m         NaN         2017 ../data/raw/transfermarkt-scraper/2017/clubs.json.gz    https://www.transfermarkt.co.uk/roda-jc-kerkrade/startseite/verein/192
+   19789  yeni-malatyaspor                     Yeni Malatyaspor                     TR1                 NaN          10         22.9                  1                   10.0                      0          Yeni Malatya Stadyumu          25745              +€778k         NaN         2021 ../data/raw/transfermarkt-scraper/2021/clubs.json.gz  https://www.transfermarkt.co.uk/yeni-malatyaspor/startseite/verein/19789
+
+2) Statistics (describe):
+              club_id        club_code             name domestic_competition_id  total_market_value  squad_size  average_age  foreigners_number  foreigners_percentage  national_team_players                stadium_name  stadium_seats net_transfer_record  coach_name  last_season                                              filename                                                                    url
+count      439.000000              439              439                     439                 0.0  439.000000   401.000000         439.000000             390.000000             439.000000                         439     439.000000                 439         0.0   439.000000                                                   439                                                                    439
+unique            NaN              439              439                      14                 NaN         NaN          NaN                NaN                    NaN                    NaN                         420            NaN                 305         NaN          NaN                                                    13                                                                    439
+top               NaN  sv-darmstadt-98  SV Darmstadt 98                     TR1                 NaN         NaN          NaN                NaN                    NaN                    NaN  Valeriy Lobanovsky Stadion            NaN                 +-0         NaN          NaN  ../data/raw/transfermarkt-scraper/2024/clubs.json.gz  https://www.transfermarkt.co.uk/sv-darmstadt-98/startseite/verein/105
+freq              NaN                1                1                      42                 NaN         NaN          NaN                NaN                    NaN                    NaN                           2            NaN                 100         NaN          NaN                                                   237                                                                      1
+mean      6283.476082              NaN              NaN                     NaN                 NaN   24.184510    25.616459          11.186788              46.582564               4.751708                         NaN   24204.091116                 NaN         NaN  2021.526196                                                   NaN                                                                    NaN
+std      14588.760049              NaN              NaN                     NaN                 NaN    8.692365     2.059485           6.807645              20.274257               4.896634                         NaN   17230.554384                 NaN         NaN     3.563978                                                   NaN                                                                    NaN
+min          3.000000              NaN              NaN                     NaN                 NaN    0.000000     0.000000           0.000000               2.400000               0.000000                         NaN       0.000000                 NaN         NaN  2012.000000                                                   NaN                                                                    NaN
+25%        435.500000              NaN              NaN                     NaN                 NaN   24.000000    24.600000           6.000000              30.800000               1.000000                         NaN   10815.000000                 NaN         NaN  2020.000000                                                   NaN                                                                    NaN
+50%       1158.000000              NaN              NaN                     NaN                 NaN   26.000000    25.800000          12.000000              48.050000               3.000000                         NaN   20087.000000                 NaN         NaN  2024.000000                                                   NaN                                                                    NaN
+75%       3575.000000              NaN              NaN                     NaN                 NaN   29.000000    26.800000          16.000000              62.400000               7.000000                         NaN   32392.000000                 NaN         NaN  2024.000000                                                   NaN                                                                    NaN
+max     110302.000000              NaN              NaN                     NaN                 NaN   41.000000    29.900000          29.000000             100.000000              22.000000                         NaN   81365.000000                 NaN         NaN  2024.000000                                                   NaN                                                                    NaN
+
+3) Missing values per column:
+club_id                      0
+club_code                    0
+name                         0
+domestic_competition_id      0
+total_market_value         439
+squad_size                   0
+average_age                 38
+foreigners_number            0
+foreigners_percentage       49
+national_team_players        0
+stadium_name                 0
+stadium_seats                0
+net_transfer_record          0
+coach_name                 439
+last_season                  0
+filename                     0
+url                          0
+
+================================================================================
+File: competitions.csv
+
+1) First 10 rows:
+competition_id              competition_code                          name           sub_type              type  country_id country_name domestic_league_code confederation                                                                                      url  is_major_national_league
+           CIT                     italy-cup                     italy-cup       domestic_cup      domestic_cup          75        Italy                  IT1        europa                      https://www.transfermarkt.co.uk/italy-cup/startseite/wettbewerb/CIT                     False
+          NLSC          johan-cruijff-schaal          johan-cruijff-schaal domestic_super_cup             other         122  Netherlands                  NL1        europa          https://www.transfermarkt.co.uk/johan-cruijff-schaal/startseite/wettbewerb/NLSC                     False
+           GRP               kypello-elladas               kypello-elladas       domestic_cup      domestic_cup          56       Greece                  GR1        europa                https://www.transfermarkt.co.uk/kypello-elladas/startseite/wettbewerb/GRP                     False
+          POSU supertaca-candido-de-oliveira supertaca-candido-de-oliveira domestic_super_cup             other         136     Portugal                  PO1        europa https://www.transfermarkt.co.uk/supertaca-candido-de-oliveira/startseite/wettbewerb/POSU                     False
+          RUSS             russian-super-cup             russian-super-cup domestic_super_cup             other         141       Russia                  RU1        europa             https://www.transfermarkt.co.uk/russian-super-cup/startseite/wettbewerb/RUSS                     False
+           SUC                     supercopa                     supercopa domestic_super_cup             other         157        Spain                  ES1        europa                      https://www.transfermarkt.co.uk/supercopa/startseite/wettbewerb/SUC                     False
+           USC                uefa-super-cup                uefa-super-cup     uefa_super_cup international_cup          -1          NaN                  NaN        europa            https://www.transfermarkt.co.uk/uefa-super-cup/startseite/pokalwettbewerb/USC                     False
+           DK1                   superligaen                   superligaen         first_tier   domestic_league          39      Denmark                  DK1        europa                    https://www.transfermarkt.co.uk/superligaen/startseite/wettbewerb/DK1                     False
+            EL                 europa-league                 europa-league      europa_league international_cup          -1          NaN                  NaN        europa              https://www.transfermarkt.co.uk/europa-league/startseite/pokalwettbewerb/EL                     False
+           ES1                        laliga                        laliga         first_tier   domestic_league         157        Spain                  ES1        europa                         https://www.transfermarkt.co.uk/laliga/startseite/wettbewerb/ES1                      True
+
+2) Statistics (describe):
+       competition_id competition_code          name    sub_type             type  country_id country_name domestic_league_code confederation                                                                  url is_major_national_league
+count              44               44            44          44               44   44.000000           36                   36            44                                                                   44                       44
+unique             44               43            43          12                4         NaN           14                   14             1                                                                   44                        2
+top               CIT     premier-liga  premier-liga  first_tier  domestic_league         NaN      England                  GB1        europa  https://www.transfermarkt.co.uk/italy-cup/startseite/wettbewerb/CIT                    False
+freq                1                2             2          14               14         NaN            4                    4            44                                                                    1                       39
+mean              NaN              NaN           NaN         NaN              NaN   94.863636          NaN                  NaN           NaN                                                                  NaN                      NaN
+std               NaN              NaN           NaN         NaN              NaN   70.518871          NaN                  NaN           NaN                                                                  NaN                      NaN
+min               NaN              NaN           NaN         NaN              NaN   -1.000000          NaN                  NaN           NaN                                                                  NaN                      NaN
+25%               NaN              NaN           NaN         NaN              NaN   39.000000          NaN                  NaN           NaN                                                                  NaN                      NaN
+50%               NaN              NaN           NaN         NaN              NaN   98.500000          NaN                  NaN           NaN                                                                  NaN                      NaN
+75%               NaN              NaN           NaN         NaN              NaN  157.000000          NaN                  NaN           NaN                                                                  NaN                      NaN
+max               NaN              NaN           NaN         NaN              NaN  190.000000          NaN                  NaN           NaN                                                                  NaN                      NaN
+
+3) Missing values per column:
+competition_id              0
+competition_code            0
+name                        0
+sub_type                    0
+type                        0
+country_id                  0
+country_name                8
+domestic_league_code        8
+confederation               0
+url                         0
+is_major_national_league    0
+
+================================================================================
+File: game_events.csv
+
+1) First 10 rows:
+                   game_event_id       date  game_id  minute          type  club_id  player_id                                                                       description  player_in_id  player_assist_id
+2f41da30c471492e7d4a984951671677 2012-08-05  2211607      77         Cards      610       4425                                              1. Yellow card  , Mass confrontation           NaN               NaN
+a72f7186d132775f234d3e2f7bc0ed5b 2012-08-05  2211607      77         Cards      383      33210                                              1. Yellow card  , Mass confrontation           NaN               NaN
+b2d721eaed4692a5c59a92323689ef18 2012-08-05  2211607       3         Goals      383      36500               , Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist           NaN           56416.0
+aef768899cedac0c9a650980219075a2 2012-08-05  2211607      53         Goals      383      36500      , Right-footed shot, 2. Tournament Goal Assist: , Pass, 1. Tournament Assist           NaN          146258.0
+5d6d9533023057b6619ecd145a038bbe 2012-08-05  2211607      74 Substitutions      383      36500                                                                    , Not reported       49499.0               NaN
+eef9c46dd75c3aa4c6a503225427446e 2012-08-05  2211607      11         Goals      383      38497 , Right-footed shot, 1. Tournament Goal Assist: , Goal-kick, 1. Tournament Assist           NaN           33210.0
+5d5aef7dedcd5dc9d35dea9438ee35e0 2012-08-05  2211607      90         Cards      610      42710                                                                    1. Yellow card           NaN               NaN
+7717860e3b0376b86f445f4749fa2ce5 2012-08-05  2211607      44         Goals      610      42710               , Header, 1. Tournament Goal Assist: , Corner, 1. Tournament Assist           NaN            4425.0
+02c708273f4fa2003873ef5908e4e3a6 2012-08-05  2211607      79         Cards      610      45509                                                                    1. Yellow card           NaN               NaN
+d1be2ce4bd5f0ca091c1b15a8569301c 2012-08-05  2211607      90         Goals      383      49499      , Right-footed shot, 1. Tournament Goal Assist: , Pass, 1. Tournament Assist           NaN          167850.0
+
+2) Statistics (describe):
+                           game_event_id        date       game_id        minute           type       club_id     player_id description  player_in_id  player_assist_id
+count                            1035043     1035043  1.035043e+06  1.035043e+06        1035043  1.035043e+06  1.035043e+06      947716  4.976780e+05      1.567590e+05
+unique                           1035043        3815           NaN           NaN              4           NaN           NaN        8497           NaN               NaN
+top     2f41da30c471492e7d4a984951671677  2023-11-01           NaN           NaN  Substitutions           NaN           NaN  , Tactical           NaN               NaN
+freq                                   1        1557           NaN           NaN         498454           NaN           NaN      293274           NaN               NaN
+mean                                 NaN         NaN  3.232167e+06  6.182032e+01            NaN  4.956375e+03  2.346498e+05         NaN  2.811291e+05      2.116055e+05
+std                                  NaN         NaN  6.800742e+05  2.358612e+01            NaN  1.182225e+04  2.120239e+05         NaN  2.388531e+05      1.943963e+05
+min                                  NaN         NaN  2.211607e+06 -1.000000e+00            NaN  1.000000e+00  1.000000e+01         NaN  1.000000e+01      1.000000e+01
+25%                                  NaN         NaN  2.609666e+06  4.600000e+01            NaN  3.470000e+02  6.600800e+04         NaN  8.716200e+04      5.956100e+04
+50%                                  NaN         NaN  3.203637e+06  6.700000e+01            NaN  9.870000e+02  1.754490e+05         NaN  2.166620e+05      1.532370e+05
+75%                                  NaN         NaN  3.840071e+06  8.000000e+01            NaN  3.137000e+03  3.410920e+05         NaN  4.006490e+05      3.134770e+05
+max                                  NaN         NaN  4.572898e+06  1.200000e+02            NaN  1.224220e+05  1.378362e+06         NaN  1.390649e+06      1.340495e+06
+
+3) Missing values per column:
+game_event_id            0
+date                     0
+game_id                  0
+minute                   0
+type                     0
+club_id                  0
+player_id                0
+description          87327
+player_in_id        537365
+player_assist_id    878284
+
+================================================================================
+File: game_lineups.csv
+
+1) First 10 rows:
+                 game_lineups_id       date  game_id  player_id  club_id       player_name            type           position number  team_captain
+b2dbe01c3656b06c8e23e9de714e26bb 2013-07-27  2317258       1443      610 Christian Poulsen     substitutes Defensive Midfield      5             0
+b50a3ec6d52fd1490aab42042ac4f738 2013-07-27  2317258       5017      610  Niklas Moisander starting_lineup        Centre-Back      4             0
+7d890e6d0ff8af84b065839966a0ec81 2013-07-27  2317258       9602     1090   Maarten Martens     substitutes        Left Winger     11             0
+8c355268678b9bbc7084221b1f0fde36 2013-07-27  2317258      12282      610       Daley Blind starting_lineup          Left-Back     17             0
+76193074d549e5fdce4cdcbba0d66247 2013-07-27  2317258      25427     1090       Roy Beerens starting_lineup       Right Winger     23             0
+e5684d3b01123e27e738a6c7ed1c24cc 2013-07-27  2317258      28815     1090       Jan Wuytens starting_lineup        Centre-Back     29             0
+d196e3ec2f03110a523b6eaa65027f07 2013-07-27  2317258      30290      610   Kenneth Vermeer starting_lineup         Goalkeeper      1             0
+e9e1212e3ba0dabdf39f45ce631799f7 2013-07-27  2317258      34784      610      Lasse Schöne starting_lineup Defensive Midfield     20             0
+53ca254113ffc1b2f4533b0e334c9a15 2013-07-27  2317258      36391     1090        Viktor Elm starting_lineup Defensive Midfield     12             0
+03fe553a31b7cc907330b989c060b5cc 2013-07-27  2317258      42266     1090    Yves De Winter     substitutes         Goalkeeper     16             0
+
+2) Statistics (describe):
+                         game_lineups_id        date       game_id     player_id       club_id player_name             type     position   number  team_captain
+count                            2191911     2191911  2.191911e+06  2.191911e+06  2.191911e+06     2191911          2191911      2191908  2191911  2.191911e+06
+unique                           2191911        3059           NaN           NaN           NaN       82154                2           17      203           NaN
+top     b2dbe01c3656b06c8e23e9de714e26bb  2022-11-13           NaN           NaN           NaN    Paulinho  starting_lineup  Centre-Back        1           NaN
+freq                                   1        3500           NaN           NaN           NaN        1136          1262067       378533    81052           NaN
+mean                                 NaN         NaN  3.079741e+06  2.137363e+05  4.394990e+03         NaN              NaN          NaN      NaN  4.720538e-02
+std                                  NaN         NaN  5.111072e+05  1.882895e+05  1.017359e+04         NaN              NaN          NaN      NaN  2.120779e-01
+min                                  NaN         NaN  2.317258e+06  1.000000e+01  1.000000e+00         NaN              NaN          NaN      NaN  0.000000e+00
+25%                                  NaN         NaN  2.611307e+06  6.292000e+04  3.390000e+02         NaN              NaN          NaN      NaN  0.000000e+00
+50%                                  NaN         NaN  3.063686e+06  1.634890e+05  9.850000e+02         NaN              NaN          NaN      NaN  0.000000e+00
+75%                                  NaN         NaN  3.484182e+06  3.124730e+05  3.000000e+03         NaN              NaN          NaN      NaN  0.000000e+00
+max                                  NaN         NaN  4.300789e+06  1.244435e+06  1.022510e+05         NaN              NaN          NaN      NaN  1.000000e+00
+
+3) Missing values per column:
+game_lineups_id    0
+date               0
+game_id            0
+player_id          0
+club_id            0
+player_name        0
+type               0
+position           3
+number             0
+team_captain       0
+
+================================================================================
+File: games.csv
+
+1) First 10 rows:
+ game_id competition_id  season        round       date  home_club_id  away_club_id  home_club_goals  away_club_goals  home_club_position  away_club_position home_club_manager_name away_club_manager_name               stadium  attendance         referee                                                                                                   url home_club_formation away_club_formation         home_club_name                       away_club_name aggregate competition_type
+ 2321027             L1    2013  1. Matchday 2013-08-11          33.0          41.0              3.0              3.0                 8.0                 9.0            Jens Keller          Thorsten Fink         Veltins-Arena     61973.0    Manuel Gräfe                 https://www.transfermarkt.co.uk/fc-schalke-04_hamburger-sv/index/spielbericht/2321027             4-2-3-1             4-2-3-1          FC Schalke 04                         Hamburger SV       3:3  domestic_league
+ 2321033             L1    2013  1. Matchday 2013-08-10          23.0          86.0              0.0              1.0                13.0                 7.0   Torsten Lieberknecht             Robin Dutt     EINTRACHT-Stadion     23000.0   Deniz Aytekin    https://www.transfermarkt.co.uk/eintracht-braunschweig_sv-werder-bremen/index/spielbericht/2321033             4-3-2-1             4-3-1-2 Eintracht Braunschweig   Sportverein Werder Bremen von 1899       0:1  domestic_league
+ 2321044             L1    2013  2. Matchday 2013-08-18          16.0          23.0              2.0              1.0                 1.0                15.0           Jürgen Klopp   Torsten Lieberknecht     SIGNAL IDUNA PARK     80200.0    Peter Sippel   https://www.transfermarkt.co.uk/borussia-dortmund_eintracht-braunschweig/index/spielbericht/2321044             4-2-3-1             4-3-2-1      Borussia Dortmund               Eintracht Braunschweig       2:1  domestic_league
+ 2321060             L1    2013  3. Matchday 2013-08-25          23.0          24.0              0.0              2.0                18.0                11.0   Torsten Lieberknecht              Armin Veh     EINTRACHT-Stadion     23325.0  Wolfgang Stark https://www.transfermarkt.co.uk/eintracht-braunschweig_eintracht-frankfurt/index/spielbericht/2321060             4-3-2-1             4-2-3-1 Eintracht Braunschweig       Eintracht Frankfurt Fußball AG       0:2  domestic_league
+ 2321072             L1    2013  5. Matchday 2013-09-14          16.0          41.0              6.0              2.0                 1.0                15.0           Jürgen Klopp          Thorsten Fink     SIGNAL IDUNA PARK     80645.0     Tobias Welz             https://www.transfermarkt.co.uk/borussia-dortmund_hamburger-sv/index/spielbericht/2321072             4-2-3-1               3-5-2      Borussia Dortmund                         Hamburger SV       6:2  domestic_league
+ 2321079             L1    2013  5. Matchday 2013-09-15          23.0           4.0              1.0              1.0                18.0                16.0   Torsten Lieberknecht      Michael Wiesinger     EINTRACHT-Stadion     22570.0     Marco Fritz      https://www.transfermarkt.co.uk/eintracht-braunschweig_1-fc-nuremberg/index/spielbericht/2321079      4-4-2 double 6             4-2-3-1 Eintracht Braunschweig                       1.FC Nuremberg       1:1  domestic_league
+ 2321086             L1    2013  6. Matchday 2013-09-21           4.0          16.0              1.0              1.0                15.0                 1.0      Michael Wiesinger           Jürgen Klopp   Max-Morlock-Stadion     50000.0    Knut Kircher           https://www.transfermarkt.co.uk/1-fc-nuremberg_borussia-dortmund/index/spielbericht/2321086             4-2-3-1             4-2-3-1         1.FC Nuremberg                    Borussia Dortmund       1:1  domestic_league
+ 2321152             L1    2013 11. Matchday 2013-11-02          44.0          33.0              0.0              2.0                 7.0                 6.0            Jos Luhukay            Jens Keller Olympiastadion Berlin     69277.0     Günter Perl                   https://www.transfermarkt.co.uk/hertha-bsc_fc-schalke-04/index/spielbericht/2321152             4-2-3-1             4-2-3-1             Hertha BSC                        FC Schalke 04       0:2  domestic_league
+ 2321205             L1    2013 17. Matchday 2013-12-21          41.0          39.0              2.0              3.0                14.0                 9.0       Bert van Marwijk          Thomas Tuchel      Volksparkstadion     50000.0 Bastian Dankert                https://www.transfermarkt.co.uk/hamburger-sv_1-fsv-mainz-05/index/spielbericht/2321205             4-2-3-1       4-4-2 Diamond           Hamburger SV 1. Fußball- und Sportverein Mainz 05       2:3  domestic_league
+ 2321233             L1    2013 20. Matchday 2014-02-08          41.0          44.0              0.0              3.0                17.0                 7.0       Bert van Marwijk            Jos Luhukay      Volksparkstadion     48593.0   Deniz Aytekin                    https://www.transfermarkt.co.uk/hamburger-sv_hertha-bsc/index/spielbericht/2321233             4-2-3-1             4-1-4-1           Hamburger SV                           Hertha BSC       0:3  domestic_league
+
+2) Statistics (describe):
+             game_id competition_id        season        round        date  home_club_id  away_club_id  home_club_goals  away_club_goals  home_club_position  away_club_position home_club_manager_name away_club_manager_name           stadium    attendance         referee                                                                                    url home_club_formation away_club_formation              home_club_name         away_club_name aggregate competition_type
+count   7.402600e+04          74026  74026.000000        74026       74026  7.401700e+04  7.401700e+04     74014.000000     74014.000000        51559.000000        51559.000000                  73198                  73198             73776  64078.000000           73374                                                                                  74026               67051               67220                       61176                  62571     74014            74026
+unique           NaN             44           NaN          117        3826           NaN           NaN              NaN              NaN                 NaN                 NaN                   5205                   4870              2421           NaN            2542                                                                                  74026                  53                  68                         439                    439       117                4
+top              NaN            IT1           NaN  First Round  2012-11-03           NaN           NaN              NaN              NaN                 NaN                 NaN          Diego Simeone          Diego Simeone  Olimpico di Roma           NaN  Anthony Taylor  https://www.transfermarkt.co.uk/fc-schalke-04_hamburger-sv/index/spielbericht/2321027             4-2-3-1             4-2-3-1  Real Madrid Club de Fútbol  Futbol Club Barcelona       1:1  domestic_league
+freq             NaN           4870           NaN         3058         105           NaN           NaN              NaN              NaN                 NaN                 NaN                    339                    357               659           NaN             490                                                                                      1               21274               20732                         368                    370      7365            51598
+mean    3.165280e+06            NaN   2017.981939          NaN         NaN  5.324385e+03  4.811172e+03         1.600400         1.331599            9.273667            9.453345                    NaN                    NaN               NaN  18346.864821             NaN                                                                                    NaN                 NaN                 NaN                         NaN                    NaN       NaN              NaN
+std     6.679408e+05            NaN      3.740290          NaN         NaN  3.114291e+04  3.068594e+04         1.433323         1.370649            5.297962            5.317900                    NaN                    NaN               NaN  17950.346007             NaN                                                                                    NaN                 NaN                 NaN                         NaN                    NaN       NaN              NaN
+min     2.211607e+06            NaN   2012.000000          NaN         NaN  1.000000e+00  2.000000e+00         0.000000         0.000000            1.000000            1.000000                    NaN                    NaN               NaN      1.000000             NaN                                                                                    NaN                 NaN                 NaN                         NaN                    NaN       NaN              NaN
+25%     2.587785e+06            NaN   2015.000000          NaN         NaN  3.540000e+02  3.470000e+02         1.000000         0.000000            5.000000            5.000000                    NaN                    NaN               NaN   4400.000000             NaN                                                                                    NaN                 NaN                 NaN                         NaN                    NaN       NaN              NaN
+50%     3.080342e+06            NaN   2018.000000          NaN         NaN  9.950000e+02  9.870000e+02         1.000000         1.000000            9.000000            9.000000                    NaN                    NaN               NaN  12400.000000             NaN                                                                                    NaN                 NaN                 NaN                         NaN                    NaN       NaN              NaN
+75%     3.646236e+06            NaN   2021.000000          NaN         NaN  3.209000e+03  3.037000e+03         2.000000         2.000000           14.000000           14.000000                    NaN                    NaN               NaN  26718.500000             NaN                                                                                    NaN                 NaN                 NaN                         NaN                    NaN       NaN              NaN
+max     4.572898e+06            NaN   2024.000000          NaN         NaN  4.506872e+06  4.506873e+06        17.000000        19.000000           21.000000           21.000000                    NaN                    NaN               NaN  99354.000000             NaN                                                                                    NaN                 NaN                 NaN                         NaN                    NaN       NaN              NaN
+
+3) Missing values per column:
+game_id                       0
+competition_id                0
+season                        0
+round                         0
+date                          0
+home_club_id                  9
+away_club_id                  9
+home_club_goals              12
+away_club_goals              12
+home_club_position        22467
+away_club_position        22467
+home_club_manager_name      828
+away_club_manager_name      828
+stadium                     250
+attendance                 9948
+referee                     652
+url                           0
+home_club_formation        6975
+away_club_formation        6806
+home_club_name            12850
+away_club_name            11455
+aggregate                    12
+competition_type              0
+
+================================================================================
+File: player_valuations.csv
+
+1) First 10 rows:
+ player_id       date  market_value_in_eur  current_club_id player_club_domestic_competition_id
+    405973 2000-01-20               150000             3057                                 BE1
+    342216 2001-07-20               100000             1241                                 SC1
+      3132 2003-12-09               400000              126                                 TR1
+      6893 2003-12-15               900000              984                                 GB1
+        10 2004-10-04              7000000              398                                 IT1
+        26 2004-10-04              1500000               16                                  L1
+        65 2004-10-04              8000000             1091                                 GR1
+        77 2004-10-04             13000000              506                                 IT1
+        80 2004-10-04               400000               27                                  L1
+       109 2004-10-04              9500000              825                                 TR1
+
+2) Statistics (describe):
+           player_id        date  market_value_in_eur  current_club_id player_club_domestic_competition_id
+count   4.966060e+05      496606         4.966060e+05    496606.000000                              496606
+unique           NaN        5316                  NaN              NaN                                  14
+top              NaN  2020-04-08                  NaN              NaN                                 TR1
+freq             NaN       10478                  NaN              NaN                               56212
+mean    2.244116e+05         NaN         2.471145e+06      4428.745041                                 NaN
+std     2.070073e+05         NaN         6.983759e+06     10940.782869                                 NaN
+min     1.000000e+01         NaN         0.000000e+00         3.000000                                 NaN
+25%     5.895700e+04         NaN         2.000000e+05       369.000000                                 NaN
+50%     1.649020e+05         NaN         5.000000e+05      1025.000000                                 NaN
+75%     3.340420e+05         NaN         1.700000e+06      2995.000000                                 NaN
+max     1.310513e+06         NaN         2.000000e+08    110302.000000                                 NaN
+
+3) Missing values per column:
+player_id                              0
+date                                   0
+market_value_in_eur                    0
+current_club_id                        0
+player_club_domestic_competition_id    0
+
+================================================================================
+File: players.csv
+
+1) First 10 rows:
+ player_id first_name    last_name                name  last_season  current_club_id         player_code   country_of_birth  city_of_birth country_of_citizenship       date_of_birth       sub_position   position  foot  height_in_cm contract_expiration_date           agent_name                                                                       image_url                                                                    url current_club_domestic_competition_id                                       current_club_name  market_value_in_eur  highest_market_value_in_eur
+        10   Miroslav        Klose      Miroslav Klose         2015              398      miroslav-klose             Poland          Opole                Germany 1978-06-09 00:00:00     Centre-Forward     Attack right         184.0                      NaN ASBW Sport Marketing   https://img.a.transfermarkt.technology/portrait/header/10-1448468291.jpg?lm=1       https://www.transfermarkt.co.uk/miroslav-klose/profil/spieler/10                                  IT1                           Società Sportiva Lazio S.p.A.            1000000.0                   30000000.0
+        26      Roman Weidenfeller  Roman Weidenfeller         2017               16  roman-weidenfeller            Germany           Diez                Germany 1980-08-06 00:00:00         Goalkeeper Goalkeeper  left         190.0                      NaN     Neubauer 13 GmbH   https://img.a.transfermarkt.technology/portrait/header/26-1502448725.jpg?lm=1   https://www.transfermarkt.co.uk/roman-weidenfeller/profil/spieler/26                                   L1                                       Borussia Dortmund             750000.0                    8000000.0
+        65    Dimitar     Berbatov    Dimitar Berbatov         2015             1091    dimitar-berbatov           Bulgaria    Blagoevgrad               Bulgaria 1981-01-30 00:00:00     Centre-Forward     Attack   NaN           NaN                      NaN      CSKA-AS-23 Ltd.   https://img.a.transfermarkt.technology/portrait/header/65-1683670068.jpg?lm=1     https://www.transfermarkt.co.uk/dimitar-berbatov/profil/spieler/65                                  GR1 Panthessalonikios Athlitikos Omilos Konstantinoupoliton            1000000.0                   34500000.0
+        77        NaN        Lúcio               Lúcio         2012              506               lucio             Brazil       Brasília                 Brazil 1978-05-08 00:00:00        Centre-Back   Defender   NaN           NaN                      NaN                  NaN   https://img.a.transfermarkt.technology/portrait/header/77-1458201664.jpg?lm=1                https://www.transfermarkt.co.uk/lucio/profil/spieler/77                                  IT1                                  Juventus Football Club             200000.0                   24500000.0
+        80        Tom       Starke          Tom Starke         2017               27          tom-starke East Germany (GDR)        Freital                Germany 1981-03-18 00:00:00         Goalkeeper Goalkeeper right         194.0                      NaN                  IFM   https://img.a.transfermarkt.technology/portrait/header/80-1471439914.JPG?lm=1           https://www.transfermarkt.co.uk/tom-starke/profil/spieler/80                                   L1                                       FC Bayern München             100000.0                    3000000.0
+       109        NaN         Dedê                Dedê         2013              825                dede             Brazil Belo Horizonte                 Brazil 1978-04-18 00:00:00          Left-Back   Defender   NaN           NaN                      NaN     Football Concept  https://img.a.transfermarkt.technology/portrait/header/109-1487263703.jpg?lm=1                https://www.transfermarkt.co.uk/dede/profil/spieler/109                                  TR1                                           Eskisehirspor             400000.0                    9500000.0
+       123  Christoph    Metzelder Christoph Metzelder         2012               33 christoph-metzelder            Germany        Haltern                Germany 1980-11-05 00:00:00        Centre-Back   Defender   NaN           NaN                      NaN                  NaN https://img.a.transfermarkt.technology/portrait/header/s_123_33_2012_1.jpg?lm=1 https://www.transfermarkt.co.uk/christoph-metzelder/profil/spieler/123                                   L1                                           FC Schalke 04            1500000.0                    9500000.0
+       132      Tomas      Rosicky       Tomas Rosicky         2015               11       tomas-rosicky               CSSR          Praha         Czech Republic 1980-10-04 00:00:00 Attacking Midfield   Midfield  both         179.0                      NaN                  NaN  https://img.a.transfermarkt.technology/portrait/header/132-1464947592.jpg?lm=1       https://www.transfermarkt.co.uk/tomas-rosicky/profil/spieler/132                                  GB1                                   Arsenal Football Club             350000.0                   17500000.0
+       162       Marc      Ziegler        Marc Ziegler         2012               79        marc-ziegler            Germany    Blieskastel                Germany 1976-06-13 00:00:00         Goalkeeper Goalkeeper right         193.0                      NaN                  NaN https://img.a.transfermarkt.technology/portrait/header/s_162_79_2012_1.jpg?lm=1        https://www.transfermarkt.co.uk/marc-ziegler/profil/spieler/162                                   L1               Verein für Bewegungsspiele Stuttgart 1893             200000.0                    1250000.0
+       215      Roque   Santa Cruz    Roque Santa Cruz         2015             1084    roque-santa-cruz           Paraguay       Asunción               Paraguay 1981-08-16 00:00:00     Centre-Forward     Attack right         193.0      2023-12-31 00:00:00                  NaN  https://img.a.transfermarkt.technology/portrait/header/215-1564992591.png?lm=1    https://www.transfermarkt.co.uk/roque-santa-cruz/profil/spieler/215                                  ES1                                               Málaga CF             250000.0                   12000000.0
+
+2) Statistics (describe):
+           player_id first_name last_name      name   last_season  current_club_id player_code country_of_birth city_of_birth country_of_citizenship        date_of_birth sub_position  position   foot  height_in_cm contract_expiration_date agent_name                                                                image_url                                                               url current_club_domestic_competition_id         current_club_name  market_value_in_eur  highest_market_value_in_eur
+count   3.260100e+04      30539     32601     32601  32601.000000     32601.000000       32601            29802         30146                  32218                32554        32421     32601  30065  30345.000000                    20510      16582                                                                    32601                                                             32601                                32601                     32601         3.107800e+04                 3.107800e+04
+unique           NaN       7030     23795     31892           NaN              NaN       31852              185          8578                    183                 9306           13         5      3           NaN                      119       2897                                                                    26854                                                             32601                                   14                       437                  NaN                          NaN
+top              NaN      David    García  Paulinho           NaN              NaN    paulinho           France        London                  Spain  1996-01-19 00:00:00  Centre-Back  Defender  right           NaN      2023-06-30 00:00:00  Wasserman  https://img.a.transfermarkt.technology/portrait/header/default.jpg?lm=1  https://www.transfermarkt.co.uk/miroslav-klose/profil/spieler/10                                  TR1  Kilmarnock Football Club                  NaN                          NaN
+freq             NaN        215        68        13           NaN              NaN          13             2337           479                   1965                   20         5744     10389  21149           NaN                     4502        504                                                                     5748                                                                 1                                 3220                       185                  NaN                          NaN
+mean    3.483126e+05        NaN       NaN       NaN   2019.357259      4815.495813         NaN              NaN           NaN                    NaN                  NaN          NaN       NaN    NaN    182.291943                      NaN        NaN                                                                      NaN                                                               NaN                                  NaN                       NaN         1.639685e+06                 3.789347e+06
+std     2.845089e+05        NaN       NaN       NaN      3.961564     11583.707786         NaN              NaN           NaN                    NaN                  NaN          NaN       NaN    NaN      7.037030                      NaN        NaN                                                                      NaN                                                               NaN                                  NaN                       NaN         6.407293e+06                 9.887241e+06
+min     1.000000e+01        NaN       NaN       NaN   2012.000000         3.000000         NaN              NaN           NaN                    NaN                  NaN          NaN       NaN    NaN     17.000000                      NaN        NaN                                                                      NaN                                                               NaN                                  NaN                       NaN         1.000000e+04                 1.000000e+04
+25%     1.079730e+05        NaN       NaN       NaN   2016.000000       403.000000         NaN              NaN           NaN                    NaN                  NaN          NaN       NaN    NaN    178.000000                      NaN        NaN                                                                      NaN                                                               NaN                                  NaN                       NaN         1.000000e+05                 2.750000e+05
+50%     2.839170e+05        NaN       NaN       NaN   2020.000000      1063.000000         NaN              NaN           NaN                    NaN                  NaN          NaN       NaN    NaN    183.000000                      NaN        NaN                                                                      NaN                                                               NaN                                  NaN                       NaN         2.500000e+05                 8.000000e+05
+75%     5.302230e+05        NaN       NaN       NaN   2023.000000      3060.000000         NaN              NaN           NaN                    NaN                  NaN          NaN       NaN    NaN    187.000000                      NaN        NaN                                                                      NaN                                                               NaN                                  NaN                       NaN         7.000000e+05                 3.000000e+06
+max     1.391239e+06        NaN       NaN       NaN   2024.000000    110302.000000         NaN              NaN           NaN                    NaN                  NaN          NaN       NaN    NaN    210.000000                      NaN        NaN                                                                      NaN                                                               NaN                                  NaN                       NaN         2.000000e+08                 2.000000e+08
+
+3) Missing values per column:
+player_id                                   0
+first_name                               2062
+last_name                                   0
+name                                        0
+last_season                                 0
+current_club_id                             0
+player_code                                 0
+country_of_birth                         2799
+city_of_birth                            2455
+country_of_citizenship                    383
+date_of_birth                              47
+sub_position                              180
+position                                    0
+foot                                     2536
+height_in_cm                             2256
+contract_expiration_date                12091
+agent_name                              16019
+image_url                                   0
+url                                         0
+current_club_domestic_competition_id        0
+current_club_name                           0
+market_value_in_eur                      1523
+highest_market_value_in_eur              1523
+
+================================================================================
+File: transfers.csv
+
+1) First 10 rows:
+ player_id transfer_date transfer_season  from_club_id  to_club_id from_club_name    to_club_name  transfer_fee  market_value_in_eur      player_name
+     16136    2026-07-01           26/27           417         123       OGC Nice         Retired           NaN             500000.0            Dante
+   1138758    2026-07-01           26/27           336         631    Sporting CP         Chelsea    52140000.0           45000000.0   Geovany Quenda
+    195778    2026-06-30           25/26            79          27  VfB Stuttgart   Bayern Munich           0.0           12000000.0  Alexander Nübel
+    569033    2026-06-30           25/26            39          27 1.FSV Mainz 05   Bayern Munich           0.0            4000000.0     Armindo Sieb
+    626913    2026-06-30           25/26           398         380          Lazio     Salernitana           0.0           15000000.0      Boulaye Dia
+    743395    2026-06-30           25/26          9010          15  FCV Dender EH   B. Leverkusen           0.0            1500000.0      Noah Mbamba
+    887834    2026-06-30           25/26           979        1023    Moreirense        Palmeiras           0.0            1000000.0           Michel
+   1047109    2026-06-30           25/26          2672         265 APO Levadiakos   Panathinaikos           0.0             300000.0  Georgios Katris
+    128223    2026-01-20           25/26           141           5    Galatasaray        AC Milan           0.0           13000000.0    Álvaro Morata
+    955213    2026-01-01           25/26         10690       36949  Zorya Lugansk Dynamo Kyiv U19           0.0              50000.0 Andriy Matkevych
+
+2) Statistics (describe):
+           player_id transfer_date transfer_season   from_club_id     to_club_id from_club_name  to_club_name  transfer_fee  market_value_in_eur player_name
+count   7.964600e+04         79646           79646   79646.000000   79646.000000          79646         79646  5.193100e+04         4.933000e+04       79646
+unique           NaN          4186              34            NaN            NaN          10123          7777           NaN                  NaN       10359
+top              NaN    2022-07-01           23/24            NaN            NaN   Without Club  Without Club           NaN                  NaN    Paulinho
+freq             NaN          2385            8516            NaN            NaN            964          1456           NaN                  NaN          42
+mean    4.232426e+05           NaN             NaN   17158.688220   12902.337556            NaN           NaN  1.115650e+06         2.488055e+06         NaN
+std     2.694543e+05           NaN             NaN   23567.526887   20482.855861            NaN           NaN  5.258424e+06         5.901403e+06         NaN
+min     3.333000e+03           NaN             NaN       1.000000       1.000000            NaN           NaN  0.000000e+00         1.000000e+04         NaN
+25%     2.073020e+05           NaN             NaN     853.000000     589.000000            NaN           NaN  0.000000e+00         2.250000e+05         NaN
+50%     3.711975e+05           NaN             NaN    6646.000000    2976.000000            NaN           NaN  0.000000e+00         6.000000e+05         NaN
+75%     5.971530e+05           NaN             NaN   24226.000000   14685.000000            NaN           NaN  0.000000e+00         2.000000e+06         NaN
+max     1.391239e+06           NaN             NaN  129264.000000  128258.000000            NaN           NaN  1.800000e+08         1.800000e+08         NaN
+
+3) Missing values per column:
+player_id                  0
+transfer_date              0
+transfer_season            0
+from_club_id               0
+to_club_id                 0
+from_club_name             0
+to_club_name               0
+transfer_fee           27715
+market_value_in_eur    30316
+player_name                0
+
