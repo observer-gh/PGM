@@ -50,7 +50,7 @@ player_valuations.csv 496 606 (→ 31 078 unique players) many duplicates per pl
 7. league_tier
 
 8. manager_tenure_home / away / diff
-   • Missing %: 1.1 % (no manager name)
+   • Missing before %: 1.1 % (no manager name)
    • Handling: NaN → 0 (“unknown/new”) plus flags manager_tenure_home_missing, manager_tenure_away_missing.
 9. avg_age_home / away / diff
    • Missing % before fill: 17 % (no DOB)
