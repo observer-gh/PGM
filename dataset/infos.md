@@ -1,3 +1,60 @@
+**3. Squad-to-team aggregation** (`02_build_features.py`) | For _each club_ inside _each match_ we aggregate:<br>1. **`avg_market_value`** — mean of 11 starters (€, later scaled).<br>2. **`nationalities`** — `nunique(country_of_birth)`. <br>3. **`avg_age`** — weighted by minutes played.<br>4. **`total_minutes / goals / assists / yellows / reds`** — simple sum. | ```python
+g = lineups.groupby(["match_id","club_id"])
+feat = g.agg(
+avg*market_value = ("market_value", "mean"),
+nationalities = ("player_nat", "nunique"),
+avg_age = (lambda x: np.average(x["age"], weights=x["minutes"])),
+total_minutes = ("minutes","sum"),
+total_goals = ("goals","sum"), # \_in that match*
+...
+)
+home = feat.reset_index().merge(matches[["match_id","home_club_id"]],
+left_on=["match_id","club_id"],
+right_on=["match_id","home_club_id"])
+
+```|
+| **4. Merge home + away sides** (`03_wide_format.py`) | Pivot so **one row = one match**.<br>Prefix `home_*` & `away_*` to the 8 numeric features (→ 16 columns).<br>Add the *target* `result` (`Home Win` / `Draw` / `Away Win`). | `match_features_merged.csv` (55 columns after adding engineered ratios etc.) |
+| **5. Light preprocessing for modelling** (`04_prep_model.py`) | • Replace `±inf` ➜ `NaN` ➜ mean-impute.<br>• Train/Test split (80 / 20, stratified).<br>• `StandardScaler` on numeric columns.<br>• Clip extreme z-scores to ±7 (avoid softmax overflow). | This is the code you’ve been iterating on in the notebook. |
+
+**Resulting table used in the project**
+
+* **Rows (matches)**: **59 605**
+* **Columns (features)**: **53 numeric** + `result` target
+* **Class balance**: Home Win 45 %, Away Win 31 %, Draw 24 %
+
+---
+
+### Explaining the columns in the report
+
+| Example column | What it really measures | Caveats |
+|----------------|-------------------------|---------|
+| `home_avg_market_value` | Mean € valuation of the 11 starters, on that match-day snapshot. | Transfermarkt values are **estimates** based on rumours & expert crowds; noisy for young or lower-profile players. |
+| `home_total_minutes` | Sum of minutes played by *all* home players (incl. subs) – proxy for team freshness / rotation. | Always 990 unless red cards or < 90-min subs; can be collinear with `home_total_red_cards`. |
+| `home_nationalities` | Diversity of passports in starting XI. | Correlated with league (EPL very international). |
+| `away_total_goals` | Goals scored by away players **in this match**. | ⚠️ Potential target leakage if used without shifting. We only include it when predicting *post-match* outcomes for now. |
+
+---
+
+### “Support” & the confusion-matrix (for your results slide)
+
+* **Confusion matrix** – rows = true class, cols = predicted.
+  Large numbers on the diagonal = good.
+  Off-diagonal cells tell you *where* the model confuses classes.
+
+* **`support`** in `classification_report` = number of test samples of that class.
+  Use it to show class imbalance survived your split.
+
+---
+
+### One-liner for the report conclusion
+
+> *“The match-level dataset combines Transfermarkt’s player-valuation scrape with minute-level line-up stats. After rigorous cleaning and aggregation, we obtain ~60k fixtures across 7 European top leagues, described by 53 engineered numeric features capturing squad cost, diversity, experience and in-match performance.”*
+
+Feel free to copy-paste (and tweak) sections above directly into your Methodology / Data Appendix.
+
+
+
+
 players.csv
 
 - 32601 entries
@@ -96,3 +153,4 @@ match_features.csv # final table: 74 014 rows × 33 cols (target + 32 features)
 ⸻
 
 Questions or tweaks? Ping @you-know-who in Slack.
+```
